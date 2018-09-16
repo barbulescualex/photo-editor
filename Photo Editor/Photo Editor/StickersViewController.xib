@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -12,7 +13,7 @@
             <connections>
                 <outlet property="headerView" destination="Jqb-lC-sL5" id="2Bt-iO-hyv"/>
                 <outlet property="holdView" destination="caC-0e-fET" id="T8J-gB-ag8"/>
-                <outlet property="pageControl" destination="fPm-Rj-wEI" id="wow-uc-U80"/>
+                <outlet property="pageControl" destination="ZLw-DI-Dqc" id="T83-lz-JfP"/>
                 <outlet property="scrollView" destination="389-Pb-g4p" id="EiN-Xe-ZxU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,16 +34,15 @@
                                 <constraint firstAttribute="height" constant="5" id="uq0-60-mnE"/>
                             </constraints>
                         </view>
-                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fPm-Rj-wEI">
-                            <rect key="frame" x="168" y="13" width="39" height="37"/>
+                        <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZLw-DI-Dqc">
+                            <rect key="frame" x="168" y="2" width="39" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </pageControl>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="caC-0e-fET" firstAttribute="top" secondItem="Jqb-lC-sL5" secondAttribute="top" constant="8" id="S62-GD-S5G"/>
                         <constraint firstAttribute="height" constant="40" id="Tl2-jg-Adq"/>
-                        <constraint firstItem="fPm-Rj-wEI" firstAttribute="centerX" secondItem="Jqb-lC-sL5" secondAttribute="centerX" id="jKc-Hd-3e8"/>
-                        <constraint firstItem="fPm-Rj-wEI" firstAttribute="top" secondItem="caC-0e-fET" secondAttribute="bottom" id="oH1-Ez-1Ze"/>
                         <constraint firstItem="caC-0e-fET" firstAttribute="centerX" secondItem="Jqb-lC-sL5" secondAttribute="centerX" id="qvF-zt-xDj"/>
                     </constraints>
                 </view>

@@ -39,6 +39,10 @@ public final class PhotoEditorViewController: UIViewController {
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
     
+    @IBOutlet weak var topToolbarTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var cancelTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var doneButtonTopConstraint: NSLayoutConstraint!
+    
     public var image: UIImage?
     /**
      Array of Stickers -UIImage- that the user will choose from
@@ -103,6 +107,18 @@ public final class PhotoEditorViewController: UIViewController {
         configureCollectionView()
         stickersViewController = StickersViewController(nibName: "StickersViewController", bundle: Bundle(for: StickersViewController.self))
         hideControls()
+        if #available(iOS 11.0, *) {
+            if let window = UIApplication.shared.delegate?.window {
+                if let inset = window?.safeAreaInsets.top {
+                    if inset>0{
+                        let constant = inset + 5
+                        topToolbarTopConstraint.constant = constant
+                        cancelTopConstraint.constant = constant - 9
+                        doneButtonTopConstraint.constant = constant - 8
+                    }
+                }
+            }
+        }
     }
     
     func configureCollectionView() {
